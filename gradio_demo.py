@@ -198,7 +198,24 @@ with demo:
         gr.Markdown("<h3> Generation History <h3>")
         # Displays a dataframe with the history of moves generated, with parameters
         history = gr.Dataframe(headers=["Move Name", "Move Description", "Generation Type", "Parameters"])
-
+    with gr.Row():
+        gr.Markdown("<h3>How did you make this?<h3>")
+        gr.Markdown("""
+        I collected the dataset from Serebii (https://www.serebii.net) , a news source and aggregator of Pokemon info.
+        
+        
+        I then added a seed phrase  "This move is called" just before each move in order to assist the model in generation. 
+        
+        
+        I then followed HuggingFace's handy language_modeling.ipynb for fine-tuning distillgpt2 on this tiny dataset, and
+        it surprisingly worked! 
+        
+        
+        I learned all about text generation using the book Natural Language Processing with Transformers by  Lewis Turnstall, 
+        Leandro von Werra and  Thomas Wolf, as well as this fantastic article (https://huggingface.co/blog/how-to-generate) by
+        Patrick von Platen. Thanks to all of these folks for creating these learning materials, and thanks to the 
+        Hugging Face team for developing this product! 
+        """)
     text_button_baseline.click(create_move, inputs=[text_input_baseline, history],
                                outputs=[text_output_baseline, history])
     text_button_greedy.click(create_greedy_search_move, inputs=[text_input_greedy, history],
