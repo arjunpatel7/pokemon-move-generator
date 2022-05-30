@@ -197,7 +197,8 @@ with demo:
     with gr.Box():
         gr.Markdown("<h3>How did you make this?<h3>")
         gr.Markdown("""
-        I collected the dataset from <a href =https://www.serebii.net>Serebii</a>, a news source and aggregator of Pokemon info.
+        I collected the dataset from <a href =https://www.serebii.net>Serebii</a>, a news source and aggregator of 
+        Pokemon info.
         
         
         I then added a seed phrase  "This move is called" just before each move in order to assist the model in 
@@ -208,11 +209,12 @@ with demo:
         and it surprisingly worked! 
         
         
-        I learned all about text generation using the book [Natural Language Processing with Transformers] (
-        https://www.oreilly.com/library/view/natural-language-processing/9781098103231/) by Lewis Tunstall, 
-        Leandro von Werra and Thomas Wolf, as well as [this fantastic article] (
-        https://huggingface.co/blog/how-to-generate) by Patrick von Platen. Thanks to all of these folks for creating 
-        these learning materials, and thanks to the Hugging Face team for developing this product! """)
+        I learned all about text generation using the book  <a href 
+        =https://www.oreilly.com/library/view/natural-language-processing/9781098103231/> Natural Language Processing 
+        with Transformers</a> by Lewis Tunstall, Leandro von Werra and Thomas Wolf, as well as <a href 
+        =https://huggingface.co/blog/how-to-generate>this fantastic article</a> by Patrick von Platen. Thanks to all 
+        of these folks for creating these learning materials, and thanks to the Hugging Face team for developing this 
+        product! """)
 
     text_button_baseline.click(create_move, inputs=[text_input_baseline, history],
                                outputs=[text_output_baseline, history])
