@@ -197,7 +197,7 @@ with demo:
     with gr.Box():
         gr.Markdown("<h3>How did you make this?<h3>")
         gr.Markdown("""
-        I collected the dataset from [Serebii] (https://www.serebii.net) , a news source and aggregator of Pokemon info.
+        I collected the dataset from <a href =https://www.serebii.net>Serebii</a>, a news source and aggregator of Pokemon info.
         
         
         I then added a seed phrase  "This move is called" just before each move in order to assist the model in 
