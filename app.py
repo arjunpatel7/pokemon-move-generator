@@ -77,7 +77,7 @@ with demo:
         model. The dataframe below allows you to keep track of each move generated, to compare!""")
     gr.Markdown("<h3> How does text generation work? <h3>")
     gr.Markdown("""Roughly, text generation models accept an input sequence of words (or parts of words, 
-    known as tokens. 
+    known as tokens). 
                 These models then output a corresponding set of words or tokens. Given the input, the model
                 estimates the probability of another possible word or token appearing right after the given sequence. In
                 other words, the model estimates conditional probabilities and ranks them in order to generate sequences
@@ -87,7 +87,7 @@ with demo:
     with gr.Tabs():
         with gr.TabItem("Standard Generation"):
             gr.Markdown(
-                """The default parameters for distilgpt2 work well to generate moves. Use this tab to have fun and as 
+                """The default parameters for distilgpt2 work well to generate moves. Use this tab as 
                 a baseline for your experiments.""")
             with gr.Row():
                 text_input_baseline = gr.Textbox(label="Move",
