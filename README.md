@@ -1,5 +1,6 @@
 ---
 title: Pokemon Move Generator
+emoji: 🎮
 colorFrom: red
 colorTo: white
 sdk: gradio
