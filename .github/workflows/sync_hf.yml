@@ -15,5 +15,5 @@ jobs:
           fetch-depth: 0
       - name: Push to hub
         env:
-          HF_TOKEN: ${{ secrets.HF }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push https://arjunpatel:$HF_TOKEN@huggingface.co/spaces/pokemon-move-generator-app main
