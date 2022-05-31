@@ -4,6 +4,7 @@ from transformers import pipeline
 from utils import format_moves
 import pandas as pd
 import tensorflow as tf
+import json
 
 model_checkpoint = "distilgpt2"
 
@@ -19,10 +20,14 @@ tf.random.set_seed(0)
 
 
 def update_history(df, move_name, move_desc, generation, parameters):
+    # get rid of first seed phrase
+
+    move_desc = move_desc.split("\n")[1:]
+    move_desc = "\n".join(move_desc)
     new_row = [{"Move Name": move_name,
                 "Move Description": move_desc,
                 "Generation Type": generation,
-                "Parameters": parameters}]
+                "Parameters": json.dumps(parameters)}]
     return pd.concat([df, pd.DataFrame(new_row)])
 
 
