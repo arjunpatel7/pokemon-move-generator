@@ -202,6 +202,12 @@ with demo:
     with gr.Box():
         gr.Markdown("<h3>How did you make this?<h3>")
         gr.Markdown("""
+        
+        Hi! My name is <a href =https://www.linkedin.com/in/arjunkirtipatel/>Arjun Patel</a> and I'm Lead Data Scientist
+         over at <a href =https://www.speeko.co>Speeko</a>. 
+        Nice to meet you! 
+        
+        
         I collected the dataset from <a href =https://www.serebii.net>Serebii</a>, a news source and aggregator of 
         Pokemon info.
         
