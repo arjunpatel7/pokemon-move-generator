@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://arjunpatel:$HF_TOKEN@huggingface.co/spaces/pokemon-move-generator-app main
+        run: git push https://arjunpatel:$HF_TOKEN@huggingface.co/spaces/Gradio-Blocks/pokemon-move-generator-app main
